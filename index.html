@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interghost</title>
+  <link rel="stylesheet" href="static/css/interghost.css">
+  <link rel="icon" type="image/png" href="static/assets/logo.png">
+</head>
+<body>
+  <header>
+    <img src="static/assets/logo.png" alt="Interghost Logo" class="logo" />
+    <h1>Interghost</h1>
+    <p class="subtitle">The modern web proxy with blazing speed and a galaxy of games.</p>
+  </header>
+  <main>
+    <section class="games-gallery">
+      <h2>Games Gallery</h2>
+      <div class="games-grid">
+        <button class="game-launch" data-game="snake">
+          <span>🐍 Snake</span>
+        </button>
+        <button class="game-launch" data-game="tetris">
+          <span>🧩 Tetris</span>
+        </button>
+        <button class="game-launch" data-game="minesweeper">
+          <span>💣 Minesweeper</span>
+        </button>
+      </div>
+      <div id="game-modal" class="modal" aria-modal="true" aria-labelledby="modal-title" tabindex="-1" hidden>
+        <div class="modal-content">
+          <button id="close-modal" aria-label="Close">✖</button>
+          <div id="game-container"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>&copy; 2025 Interghost. Space-themed, privacy-first.</span>
+  </footer>
+  <script src="static/js/ui.js"></script>
+</body>
+</html>
