@@ -271,6 +271,21 @@ fetch(path)
     }
     pinList = pinList ? pinList.split(",").map(Number) : [];
     appInd = 0;
+    
+    for (const app of appsList) {
+      if (app.categories?.includes("local")) {
+        app.local = true;
+      } else if (app.link && (app.link.includes("now.gg") || app.link.includes("nowgg.me"))) {
+        if (app.partial === null || app.partial === undefined) {
+          app.partial = true;
+          app.say = "Enjoy.";
+        }
+      } else if (app.link?.includes("nowgg.nl")) {
+        if (app.error === null || app.error === undefined) {
+          app.error = true;
+          app.say = "Enjoy.";
+        }
+      }
 
       const pinNum = appInd;
 
